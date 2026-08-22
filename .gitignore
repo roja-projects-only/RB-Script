@@ -1,0 +1,5 @@
+scratch_transcripts/
+*.wav
+*.tmp
+__pycache__/
+*.pyc
