@@ -6,6 +6,8 @@ description: Generate a new Division-level Filipino radio script STRUCTURE into 
 
 You are the orchestrator for this workspace's school radio broadcasting team. The user just invoked `/generate-division-script`.
 
+This command writes a **structure / skeleton** as a flat file under `division-scripts/`. For a **completely new on-air script package** in its own subfolder (must not resemble the old show), the user should run `/generate-new-script` instead. If they invoked this command, produce the structure.
+
 Optional user arguments (may be empty — **empty is the normal case**):
 $ARGUMENTS
 
@@ -30,6 +32,7 @@ Produce a **competition-ready STRUCTURE / skeleton**, not a fully filled news sc
 - sports / showbiz **category launches, tosses, tone-shift cues, sign-off formulas**
 - production cues, bed map, self-describing SFX language
 - pacing architecture (target rundown)
+- **AWIT only if it fits** (opening theme, infomercial jingle, closing reprise — see §7b). A song is not required.
 
 **Leave as clear, consistent placeholders (competition-day content):**
 
@@ -38,7 +41,8 @@ Produce a **competition-ready STRUCTURE / skeleton**, not a fully filled news sc
 - local news body
 - sports body
 - showbiz body
-- infomercial scene, song lyric, and PSA/paalala body
+- infomercial scene, sourced fact, solution, CTA, and PSA/paalala body
+- any AWIT slot you chose not to write
 - any in-story SFX that would belong to a specific news event
 - clock numbers in the time check
 
@@ -257,7 +261,7 @@ branded open → headlines → 2 hard-news reports → tease + promise
 
    No child-shaming beat (the old teacher PSA had one — do not treat that as a virtue). Do not copy National game-show frames.
 10. Re-entry restates identity (and may time-check). Then sports, then showbiz, with category bed changes and a tone shift (lexicon + bed, not a new persona unless the locked/proposed concept already contains one — and contain any persona to the showbiz slot).
-11. Close: recap line → anchor IDs → station identity / unison slogan → theme callback to the opening → fade. Same ID form as the open.
+11. Close: recap line → anchor IDs → station identity / unison slogan → theme callback to the opening → fade. Same ID form as the open. A closing **AWIT** only if it fits (§7b).
 12. Sound: **4–5 category beds max**; stingers at **boundaries only**; beds duck under speech; ~1 cue / 15–25 s at rest; self-describing labels; one sonic logo at open and close (and optionally the return), not looped inside reports. Theatrical SFX live in the infomercial zone. No music-only gaps.
 
 Speakability: short declaratives, one main clause per sentence, verbalize numbers when they later get filled, cap English tokens, write lines the cast can actually say. Unison lines must be short.
@@ -279,7 +283,9 @@ Use these tokens **verbatim** everywhere that slot appears (headline text, toss 
 | `[SPORTS NA BALITA]` | Sports body | News register + energy; local/Filipino angle |
 | `[SHOWBIZ NA BALITA]` | Showbiz body | Tone shift; facts clean |
 | `[INFOMERCIAL-SCENE]` | Dramatized scene | Hook + problem; dignifying; 2–4 characters |
-| `[INFOMERCIAL-AWIT]` | Infomercial song | Optional; empty line ready |
+| `[INFOMERCIAL-AWIT]` | Infomercial song | Only if that AWIT slot is PLACEHOLDER |
+| `[AWIT-THEME]` | Opening theme | Only if PLACEHOLDER |
+| `[AWIT-CLOSE]` | Closing reprise | Only if PLACEHOLDER |
 | `[INFOMERCIAL-FACT]` | One sourced statistic | Never invent; needs source |
 | `[INFOMERCIAL-SOLUSYON]` | Named entity / solution | Named, not vague |
 | `[INFOMERCIAL-CTA]` | Call to action | Verb + object |
@@ -287,6 +293,22 @@ Use these tokens **verbatim** everywhere that slot appears (headline text, toss 
 | `[SFX-KWENTO]` | Optional in-story SFX | Only if the day's story needs it; not pre-chosen bells/whistles from old stories |
 
 Keep the previous placeholder spirit: hollow the **content**, not the **architecture**.
+
+### 7b. AWIT — write, placeholder, or omit (not always on)
+
+A sung **AWIT** is **optional**. The old script had an opening theme, an infomercial song, and a closing fragment; that is historical, not a requirement.
+
+Decide **independently** for each slot:
+
+| Slot | If it fits the concept | If it does not |
+|------|------------------------|----------------|
+| Opening theme | Original short lyrics (`**AWIT:**` …) | `**AWIT:** [AWIT-THEME]` **or omit** the cue |
+| Infomercial jingle | Original short lyrics | `**AWIT:** [INFOMERCIAL-AWIT]` **or omit** |
+| Closing reprise | A fragment that answers the opening song | `**AWIT:** [AWIT-CLOSE]` **or omit** |
+
+Include a written song only when it earns its seconds (musical concept, needed bookend, jingle-shaped PSA). A chant, SFX logo, or spoken unison can carry identity instead. Do **not** force a theme onto every draft. Do **not** always leave AWIT empty. If both options fit, pick one. Record `WRITTEN` / `PLACEHOLDER` / `OMITTED` plus a one-line reason in production notes.
+
+Never reuse `HALINA’T MAGLAKBAY…`, the teacher PSA song, the old close fragment, or any National jingle.
 
 In toss lines, reprise the same headline token, then the named reporter, then the question.
 
@@ -334,6 +356,7 @@ Never write `DIVISION-SCRIPT.md` at repo root. Never name a new draft `ORIGINAL-
    - status: STRUCTURE / SKELETON
    - concept status: LOCKED vs PROPOSAL
    - identity in one block (callsign, frequency, program, slogan exact form, sonic logo, audience)
+   - **AWIT decisions** (theme / infomercial / close: WRITTEN, PLACEHOLDER, or OMITTED)
    - placeholder legend (the table above)
    - bed map (4–5 beds) and sonic-logo cue name
    - target rundown table with timing bands
@@ -358,10 +381,11 @@ Do not include a long research essay. Do not quote National lines “for inspira
 - [ ] Headlines 3–4 exist as tokens with reveal-vs-tease instructions in the notes
 - [ ] Named-question toss + thank-you around each report placeholder
 - [ ] Infomercial has written bumpers + CTA-shaped holes; no shaming beat
+- [ ] Each AWIT slot is WRITTEN, PLACEHOLDER, or OMITTED with a reason — not copied from the old songs
 - [ ] Close answers the open; slogan form is identical everywhere
 - [ ] House format; no copied markdown glitches; Tagapagbalita 3 credited, silent
 - [ ] New file written; `ORIGINAL-SCRIPT.md` untouched
-- [ ] Chat reply tells the user the output path, the concept in one sentence, proposal vs lock, and how to fill tokens on the day — without reprinting the entire script unless they ask
+- [ ] Chat reply tells the user the output path, the concept in one sentence, proposal vs lock, AWIT choices, and how to fill tokens on the day — without reprinting the entire script unless they ask
 
 If arguments request a filled news script, **refuse that part** and still produce the structure, unless the user also supplied a fact sheet and explicitly asked to fill — even then, this command's default is placeholders.
 

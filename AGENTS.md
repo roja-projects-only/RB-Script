@@ -58,7 +58,7 @@ Older analysis files still talk about “revising `ORIGINAL-SCRIPT.md`.” That 
 ### Not done — do not assume these exist
 
 - No approved **concept lock** file (the benchmark’s “approved concept reference” was never created)
-- No **new Division script** yet (when one exists, it will be `division-scripts/DIVISION-SCRIPT-[CONCEPT].md`)
+- No **new Division script** yet (structures: `division-scripts/DIVISION-SCRIPT-[CONCEPT].md`; complete new packages: `division-scripts/[CONCEPT]/`)
 - No current-competition **fact sheet**
 - No root README / CLAUDE.md
 - No official NSPC rubric, results, or rankings in this repo
@@ -182,7 +182,14 @@ In-story SFX that belonged to those stories (school bell, door, whistle, notific
 | `.agents/skills/` | Generic installed skills (research, transcription, planning) | Not radio-script canon |
 | `.opencode/commands/` | Project OpenCode slash commands | Edit when the workflow changes |
 
-There is no `concept/`, `docs/`, `research/`, or `graphify-out/` directory. Concept research for *National teams* lives in `national-script-analysis/specialists/originality-and-concept.md` and benchmark §19. Our concept proposals, when they exist, live under `division-scripts/` as `DIVISION-CONCEPT-[CONCEPT].md`. Until one is marked **LOCKED** / **APPROVED**, they are proposals.
+**OpenCode commands (project):**
+
+| Command | Writes | What it is |
+|---------|--------|------------|
+| `/generate-division-script` | `division-scripts/DIVISION-SCRIPT-[CONCEPT].md` (flat) | Competition-ready **structure** / skeleton |
+| `/generate-new-script` | `division-scripts/[CONCEPT]/` (own subfolder) | **Completely new** on-air script package that must not resemble `ORIGINAL-SCRIPT.md` |
+
+There is no `concept/`, `docs/`, `research/`, or `graphify-out/` directory. Concept research for *National teams* lives in `national-script-analysis/specialists/originality-and-concept.md` and benchmark §19. Our concept proposals live under `division-scripts/` (flat `DIVISION-CONCEPT-[CONCEPT].md` or `division-scripts/[CONCEPT]/DIVISION-CONCEPT-[CONCEPT].md`). Until marked **LOCKED** / **APPROVED**, they are proposals.
 
 ---
 
@@ -246,9 +253,9 @@ There is **no locked concept file**. Generate, compare, and revise freely when a
 - Local anchoring (Montalbeños, Luzon greeting) is a strength of the previous script if the next contest is still local to that audience.
 - Fix the exact form of any slogan before it goes into a script (variant drift kills brands).
 
-When a concept is approved, **create a dedicated concept file** at `division-scripts/DIVISION-CONCEPT-[CONCEPT].md` (mark it **LOCKED**) rather than hiding the lock only inside a script. The benchmark assumes that file exists; it does not yet.
+When a concept is approved, **create a dedicated concept file** (mark it **LOCKED**) rather than hiding the lock only inside a script: `division-scripts/DIVISION-CONCEPT-[CONCEPT].md` or, for a package from `/generate-new-script`, `division-scripts/[CONCEPT]/DIVISION-CONCEPT-[CONCEPT].md`. The benchmark assumes that file exists; it does not yet.
 
-The user usually does **not** arrive with a concept. Inventing one is expected when they run `/generate-division-script` (or otherwise ask for a new script). Label it a proposal until they lock it. Do not stall and ask them to pick.
+The user usually does **not** arrive with a concept. Inventing one is expected when they run `/generate-division-script` or `/generate-new-script`. Label it a proposal until they lock it. Do not stall and ask them to pick.
 
 ---
 
@@ -273,16 +280,19 @@ Improve from the benchmark, for example:
 - self-describing sound cues; beds that duck under speech
 - a closing that answers the *new* opening
 
-**Do not write the new script, choose the final concept, or fill news slots unless the user asks.** Running `/generate-division-script` *is* that ask: invent a strong concept and write a **structure** (placeholders for competition-day news). Casual chat still does not invent a script unprompted.
+**Do not write the new script, choose the final concept, or fill news slots unless the user asks.** Running `/generate-division-script` *is* an ask for a **structure**. Running `/generate-new-script` *is* an ask for a **completely new script package** that must not be similar or identical to `ORIGINAL-SCRIPT.md`. Casual chat still does not invent a script unprompted.
 
 New Division work lives in **`division-scripts/`**, never at repo root:
 
-- `division-scripts/DIVISION-SCRIPT-[CONCEPT].md` — working structure/draft (`[CONCEPT]` is a short slug from the program title or metaphor, e.g. `BATINGAW`)
-- `division-scripts/DIVISION-CONCEPT-[CONCEPT].md` — concept proposal; mark **LOCKED** only when the user approves
-- `division-scripts/DIVISION-SCRIPT-[CONCEPT]-2.md` — later pass if the same slug already exists
-- a short **fact sheet** beside any filled news/infomercial, in the same folder
+- **Structure (flat):** `division-scripts/DIVISION-SCRIPT-[CONCEPT].md` plus optional `DIVISION-CONCEPT-[CONCEPT].md`
+- **New script package (subfolder):** `division-scripts/[CONCEPT]/DIVISION-SCRIPT-[CONCEPT].md` and `division-scripts/[CONCEPT]/DIVISION-CONCEPT-[CONCEPT].md`
+- `[CONCEPT]` is a short slug from the program title or metaphor, e.g. `BATINGAW`
+- later pass: `-2` suffix on the file, or `[CONCEPT]-2/` for a package
+- a short **fact sheet** beside any filled news/infomercial, in the same folder as that draft
 
-Never name a new draft `ORIGINAL-SCRIPT.md`. Never name it bare `DIVISION-SCRIPT.md`.
+Never name a new draft `ORIGINAL-SCRIPT.md`. Never dump a `/generate-new-script` package as a flat root-level `DIVISION-SCRIPT.md`.
+
+**AWIT is optional in every generated draft.** Opening theme, infomercial jingle, and closing reprise may each be written, left as a placeholder (`[AWIT-THEME]`, `[INFOMERCIAL-AWIT]`, `[AWIT-CLOSE]`), or omitted — whichever **fits the concept**. Do not copy the old Tagahabi songs. Do not force a jingle onto a non-musical identity, and do not always leave the slots empty.
 
 ---
 
@@ -305,7 +315,7 @@ Unless a path starts with `transcripts/` or is a root file, `specialists/`, `per
 | Sports / showbiz | Benchmark §14–15; `specialists/sports-and-showbiz.md` | Previous sign-off formulas in our script |
 | Pacing / runtime | Benchmark §18; `specialists/pacing-and-timing.md` | Rundown tables inside National `actual-script.md` files |
 | Language / speakability | Benchmark §17; `specialists/language-and-delivery.md` | `specialists/competition-quality.md` (delivery as the widest quality gap) |
-| Full **new Division script** | This file; `ORIGINAL-SCRIPT.md`; placeholder slot map; **approved concept if it exists**; whole benchmark especially §3, §20–28 | Specialists for each weak dimension; `cross-comparison/differences-between-teams.md` so we do not assume one National style |
+| Full **new Division script** | This file; `ORIGINAL-SCRIPT.md` (format + **what not to clone**); placeholder slot map as functions only; **approved concept if it exists**; whole benchmark especially §3, §20–28 | Specialists for each weak dimension; `cross-comparison/differences-between-teams.md`; write a package under `division-scripts/[CONCEPT]/` via `/generate-new-script` |
 | Score / critique a draft | Benchmark §25–27 | Matching specialist for each low score |
 | “Did we copy someone?” | Benchmark §21; `reusable-techniques.md` copying notes | That contestant’s per-script **DO NOT COPY**; `originality-and-concept.md` |
 | Quote a National line | `transcripts/Contestant-N/actual-script.md` | `full-transcript.md` if unclear |
@@ -352,7 +362,7 @@ Reuse the study’s labels when analyzing: **DIRECTLY OBSERVED**, **CROSS-SCRIPT
 - Put generated analyses in a new dated folder; do not mix them into `transcripts/` or `NSPC-Samples/`
 - `scratch_transcripts/` is gitignored working debris
 - Keep a clean original, a placeholder slot map, and named drafts as three different things
-- New Division scripts go in `division-scripts/DIVISION-SCRIPT-[CONCEPT].md`, not the repo root
+- New Division structures go in `division-scripts/DIVISION-SCRIPT-[CONCEPT].md`; complete new scripts go in `division-scripts/[CONCEPT]/`; never the repo root
 - If you must change identity, do it in a new draft + concept file in that folder, not by silently rewriting history
 
 ---
@@ -368,6 +378,7 @@ Conventions to preserve:
 - English or technical terms in *italics* when they sit inside Filipino lines
 - Sound and music as their own bold cue lines: `**STINGER**`, `**TUNOG NG …**`, `**PAGPASOK NG MUSIKA…**`, combined cues with ellipsis (`**STINGER… PAGPALIT NG MUSIKA…**`)
 - Station ID spelled for air (`D-Z-R-M`, `SAIS-SYETE-PUNTO-SINGKO`) when that identity is still in use
+- `**AWIT:**` is a legal cue, not a required slot. Opening theme, infomercial jingle, and close reprise: write original lyrics if they fit, else placeholder or omit. Never reuse the previous jingles.
 
 National `actual-script.md` files add timestamps, rundown tables, and `[UP AND UNDER]` / `[SFX: …]` brackets. Those are useful **production ideas** (especially ducking beds under speech and a timestamped rundown). They are not our default page look.
 
@@ -429,6 +440,7 @@ Future agents should not paper over these:
 6. **No official rules packet** in the repo. Do not invent judging criteria.
 7. **Thank-you receipts, Q&A loops, UP AND UNDER** are National high-ROI techniques missing from our last script — apply them in *new* writing, not by rewriting history.
 8. **`.agents/skills`** are generic tools. They do not override this file for radio work.
+9. **AWIT is optional.** Include a song when it fits the concept; otherwise placeholder or omit. Not every draft needs the old three-song shape.
 
 ---
 
@@ -441,5 +453,5 @@ For almost any non-trivial request:
 3. If it needs a quality bar: `NATIONAL-RADIO-SCRIPT-BENCHMARK.md` (especially §20–28).
 4. Drill into **one** specialist or one exemplar, not all 18 analyses.
 5. Distinguish historical material, benchmark principle, and new proposal.
-6. Write new work in **`division-scripts/`** as `DIVISION-SCRIPT-[CONCEPT].md` unless the user named a working file.
+6. Write new work in **`division-scripts/`** — flat `DIVISION-SCRIPT-[CONCEPT].md` for a structure, or `division-scripts/[CONCEPT]/` for a complete new script package — unless the user named a working file.
 7. Leave `ORIGINAL-SCRIPT.md`, transcripts, audio, and the analysis corpus intact.
