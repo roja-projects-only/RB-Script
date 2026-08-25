@@ -16,12 +16,12 @@ It holds:
 - **18 National-level (NSPC) sample recordings**, verified transcripts, and a completed analysis corpus
 - a root **benchmark** that turns those analyses into principles for our next Division script
 
-The team’s last on-air identity (historical, not automatically locked for the next contest):
+The team’s last on-air identity:
 
-- Station: **DZRM 67.5**
-- Program: **Tagahabi ng Balita**
+- Station (locked for the next contest): **DZRM 67.5** — on air `D-Z-R-M`, `SAIS-SYETE-PUNTO-SINGKO`. Do not replace the callsign or frequency.
+- Program: **Tagahabi ng Balita** (historical — not automatically locked)
 - Audience: **Montalbeños** (Montalban / Rodriguez), Luzon
-- Concept overlay: **weaving/service** (“tagahabi ng kamalayan”) plus a **vehicle / aarangkada** frame (engine, horn, travel jingle, “pepreno” break)
+- Concept overlay: **weaving/service** (“tagahabi ng kamalayan”) plus a **vehicle / aarangkada** frame (engine, horn, travel jingle, “pepreno” break) — historical unless the user keeps it
 - Cast as written: Rain Calites & Celine Asoy (anchors); Tyrah Inares & Carl Adlawan (reporters); Khassy Rada listed as Tagapagbalita 3 but unused on air; Rodger Pacumba Jr. (technical / writer); Gwyneth Ashley Damasen (director)
 
 ---
@@ -64,7 +64,7 @@ Older analysis files still talk about “revising `ORIGINAL-SCRIPT.md`.” That 
 - No official NSPC rubric, results, or rankings in this repo
 - Specialist M’s quality ranking (C16 > C10 > C1 > C5 …) is **analyst judgment**, not an official result
 
-Until a concept is explicitly approved, treat station identity, slogan, jingle, and metaphor as **proposals or historical material**, not locked brand.
+**Locked now:** callsign + frequency **DZRM 67.5** (`D-Z-R-M`, `SAIS-SYETE-PUNTO-SINGKO`). Until a concept is explicitly approved, treat **program title, slogan, and metaphor** as proposals or historical material — not the station ID.
 
 ---
 
@@ -156,7 +156,7 @@ In-story SFX that belonged to those stories (school bell, door, whistle, notific
 **How to use it**
 
 - **Content-only refresh under the old rundown:** copy this file (or a new draft forked from it); fill the tokens; keep structure. Do not fill the skeleton in-place if that would destroy the slot map — copy first.
-- **New concept / new Division script:** use it as a **slot map** (open → headlines → 2 hard news → infomercial → sports → showbiz → close). Do **not** carry DZRM / Tagahabi / aarangkada / jingle / bumpers forward unless the user keeps them.
+- **New concept / new Division script:** use it as a **slot map** (open → headlines → 2 hard news → infomercial → sports → showbiz → close). **Keep DZRM 67.5.** Do **not** carry Tagahabi / aarangkada / jingle / bumpers forward unless the user keeps them.
 - Never fill slots from the National shared news pool (Ormoc ATM scam, WPS cyanide, Middle East oil, Alcantara, Oscars 2026). That pool is competition-prompt material from another event.
 
 ---
@@ -248,7 +248,7 @@ There is **no locked concept file**. Generate, compare, and revise freely when a
 - A concept is a **system**: language for the frame (open / transitions / close), one sound at the edges, closing answers opening, paid off at least twice. A one-off slogan is a broken promise.
 - Concept is a **container**, not the news body. Hard-news prose stays plain.
 - Complete load-bearing metaphors are rare even at National (2/18). A simpler bookended system is a valid Division target.
-- Invented callsign + frequency + program title is the genre. **Never reuse 91.26 or “Patrol.”** Our 67.5 / Tagahabi is distinct; replacing it is a creative choice, not a requirement.
+- Keep **our** callsign + frequency: **DZRM 67.5** (`D-Z-R-M`, `SAIS-SYETE-PUNTO-SINGKO`). Invent a program title / concept around that station. **Never reuse 91.26 or “Patrol.”** Replacing Tagahabi is a creative choice; replacing 67.5 is not.
 - Truth/service slogans are the genre default — they do not differentiate unless they have a hook that is *ours*.
 - Local anchoring (Montalbeños, Luzon greeting) is a strength of the previous script if the next contest is still local to that audience.
 - Fix the exact form of any slogan before it goes into a script (variant drift kills brands).
@@ -292,7 +292,7 @@ New Division work lives in **`division-scripts/`**, never at repo root:
 
 Never name a new draft `ORIGINAL-SCRIPT.md`. Never dump a `/generate-new-script` package as a flat root-level `DIVISION-SCRIPT.md`.
 
-**AWIT is optional in every generated draft.** Opening theme, infomercial jingle, and closing reprise may each be written, left as a placeholder (`[AWIT-THEME]`, `[INFOMERCIAL-AWIT]`, `[AWIT-CLOSE]`), or omitted — whichever **fits the concept**. Do not copy the old Tagahabi songs. Do not force a jingle onto a non-musical identity, and do not always leave the slots empty.
+**AWIT is a placeholder only — never generate song lyrics.** Melody is hard to source. Leave empty cues (`**AWIT:** [AWIT-THEME]`, `[INFOMERCIAL-AWIT]`, `[AWIT-CLOSE]`) so a known track can be dropped in later. Carry identity with spoken slogan, unison, stingers, and beds. Do not copy the old Tagahabi songs. Do not invent replacement lyrics.
 
 ---
 
@@ -377,8 +377,8 @@ Conventions to preserve:
 - Spoken copy in **ALL CAPS** Filipino
 - English or technical terms in *italics* when they sit inside Filipino lines
 - Sound and music as their own bold cue lines: `**STINGER**`, `**TUNOG NG …**`, `**PAGPASOK NG MUSIKA…**`, combined cues with ellipsis (`**STINGER… PAGPALIT NG MUSIKA…**`)
-- Station ID spelled for air (`D-Z-R-M`, `SAIS-SYETE-PUNTO-SINGKO`) when that identity is still in use
-- `**AWIT:**` is a legal cue, not a required slot. Opening theme, infomercial jingle, and close reprise: write original lyrics if they fit, else placeholder or omit. Never reuse the previous jingles.
+- Station ID spelled for air as **`D-Z-R-M`**, **`SAIS-SYETE-PUNTO-SINGKO`** (locked)
+- `**AWIT:**` is a **placeholder cue only**. Keep the slot (opening / infomercial / close) as `**AWIT:** [AWIT-THEME]` etc. **Do not generate song lyrics.** Never reuse the previous jingles.
 
 National `actual-script.md` files add timestamps, rundown tables, and `[UP AND UNDER]` / `[SFX: …]` brackets. Those are useful **production ideas** (especially ducking beds under speech and a timestamped rundown). They are not our default page look.
 
@@ -432,7 +432,7 @@ One specialist file per question is usually enough; do not re-run the entire 18-
 
 Future agents should not paper over these:
 
-1. **No approved concept.** Propose; do not lock identity unless the user does.
+1. **No approved concept.** Propose program title, slogan, and metaphor; do not lock those unless the user does. **Callsign + frequency are already locked:** DZRM 67.5.
 2. **Inventory vs this file.** `corpus-inventory.md` still calls `ORIGINAL-SCRIPT.md` “the script future agents will revise.” Wrong now. Fork a new Division draft.
 3. **Benchmark §25 “Preserve” rules** apply to an *approved* draft (facts, roles, locked branding). They do **not** forbid a new concept or a new script. During concept work, those preserve rules are on hold for identity. They come back once the user locks a concept and a draft.
 4. **Travel overlap with C5** — see §7. Do not treat the old horn/aarangkada system as automatically safe or automatically banned; it is a decision.
@@ -440,7 +440,7 @@ Future agents should not paper over these:
 6. **No official rules packet** in the repo. Do not invent judging criteria.
 7. **Thank-you receipts, Q&A loops, UP AND UNDER** are National high-ROI techniques missing from our last script — apply them in *new* writing, not by rewriting history.
 8. **`.agents/skills`** are generic tools. They do not override this file for radio work.
-9. **AWIT is optional.** Include a song when it fits the concept; otherwise placeholder or omit. Not every draft needs the old three-song shape.
+9. **AWIT is placeholder-only.** Keep empty `**AWIT:**` slots; never write lyrics. Melody is hard to source.
 
 ---
 

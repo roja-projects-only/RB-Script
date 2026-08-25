@@ -1,5 +1,5 @@
 ---
-description: Generate a completely original Division-level Filipino radio script into its own division-scripts/[CONCEPT]/ folder — not a reskin of the old show; AWIT only if it fits
+description: Generate a completely original Division-level Filipino radio script into its own division-scripts/[CONCEPT]/ folder — not a reskin of the old show; AWIT placeholders only, no generated songs
 ---
 
 # Generate a completely NEW Division script
@@ -23,7 +23,7 @@ If arguments conflict with `AGENTS.md`, `AGENTS.md` wins unless the argument is 
 
 A **complete new Division-level radio script** — full spoken frame, original identity, original transitions, original close — with placeholders only for competition-day news and advocacy facts.
 
-It must **not** be a polish, reorder, or reskin of *Tagahabi ng Balita* / DZRM 67.5 / aarangkada / PEPRENO. If someone who knows the old script could recognize this as “the same show with a new metaphor,” you failed. Rewrite.
+The station stays **DZRM 67.5**. The *show* must **not** be a polish, reorder, or reskin of *Tagahabi ng Balita* / aarangkada / PEPRENO. If someone who knows the old script could recognize this as “the same program with a new metaphor,” you failed. Rewrite.
 
 **Fully write:**
 
@@ -35,15 +35,15 @@ It must **not** be a polish, reorder, or reskin of *Tagahabi ng Balita* / DZRM 6
 - infomercial entry bumper, re-entry, scene architecture, station tag
 - sports / showbiz launches and tone-shift cues
 - production cues, bed map, pacing rundown
-- **AWIT only if it fits** (see §4). Otherwise a placeholder or omit the slot.
+- **AWIT as empty placeholders only** (see §4). No generated song lyrics.
 
 **Placeholders only:**
 
 - four headlines, national / local / sports / showbiz bodies
 - infomercial scene, sourced fact, named solution, CTA, paalala body
+- AWIT slots (empty placeholders — no lyrics)
 - in-story SFX that belong to a specific news event
 - clock numbers
-- any AWIT slot you chose not to write
 
 Do **not** invent news facts, scores, official names, laws, or infomercial statistics. Do **not** reuse previous stories (Geronimo, KVSHS, DepEd grading, Kris Aquino). Do **not** lift the National news pool (Ormoc ATM, WPS cyanide, Middle East oil, Alcantara, Oscars 2026).
 
@@ -130,25 +130,25 @@ Do not treat `mic-check.md` as judged content.
 
 ---
 
-## 4. AWIT — write, placeholder, or omit (not always on)
+## 4. AWIT — placeholder only, no generated song
 
-A sung **AWIT** is **optional**. National entries mix spoken IDs, chants, and real jingles. Our old script had three sung moments; that is historical, not a rule.
+**Never write song lyrics.** Melody is hard to source, so invented words are unusable.
 
-Decide **independently** for each slot:
+Keep the three slots in the rundown as **empty placeholders** (opening after ID, infomercial break, close):
 
-| Slot | Cue | If it fits | If it does not |
-|------|-----|------------|----------------|
-| Opening theme | `**AWIT:**` after the ID / hook | Original short lyrics that belong to *this* concept | `**AWIT:** [AWIT-THEME]` **or omit** the cue |
-| Infomercial jingle | `**AWIT:**` inside the break | Original short lyrics that serve the PSA | `**AWIT:** [INFOMERCIAL-AWIT]` **or omit** |
-| Closing reprise | `**AWIT:**` in the close | A fragment that answers the opening song | `**AWIT:** [AWIT-CLOSE]` **or omit** |
+```
+**AWIT:** [AWIT-THEME]
 
-**Fit means:** the song earns its seconds — the concept is musical, the close needs a sung bookend, or the infomercial is jingle-shaped. A chant, bell, stamp, or spoken unison can be the logo instead.
+**AWIT:** [INFOMERCIAL-AWIT]
 
-**Do not** force a theme onto a non-musical concept. **Do not** always leave AWIT empty. If song and no-song both fit, pick one (this may differ from draft to draft). Record each choice in production notes: `WRITTEN` / `PLACEHOLDER` / `OMITTED` + one-line reason.
+**AWIT:** [AWIT-CLOSE]
+```
 
-Never reuse the old lyrics (`HALINA’T MAGLAKBAY…`, teacher PSA song, `HANDOG PARA SA BAYAN, HATID ANG KAMALAYAN…`) or any National jingle.
+- Do **not** fill those lines with lyrics, chorus, or “sample” verses.
+- Do **not** copy the old lyrics (`HALINA’T MAGLAKBAY…`, teacher PSA song, `HANDOG PARA SA BAYAN, HATID ANG KAMALAYAN…`) or any National jingle.
+- Carry identity with spoken slogan, unison money lines, a sonic SFX logo, stingers, and category beds. The AWIT lines are holes for a track the team already has or will pick later.
 
-Written AWIT lines: ALL CAPS Filipino, short enough to sing in a student chorus, parenthetical shout-backs allowed.
+Production notes: `AWIT: PLACEHOLDER ONLY (no generated lyrics)`.
 
 ---
 
@@ -158,23 +158,27 @@ Written AWIT lines: ALL CAPS Filipino, short enough to sing in a student chorus,
 
 Must be a **system**: language at open / transitions / close; **one** sonic logo at the edges; close answers open; paid off ≥2 times. Container, not news-body metaphor. Bookended system is enough.
 
-Invent callsign + frequency + program title. **Never** `91.26`, `Patrol` / `Patroller`. **Never** default to `DZRM 67.5` / `Tagahabi ng Balita` unless arguments keep them.
+**Station ID is locked:** **DZRM 67.5**. On air: `D-Z-R-M`, `SAIS-SYETE-PUNTO-SINGKO`. Header: `D-Z-R-M 67.5`. Do not invent a different callsign or frequency. **Never** `91.26`, `Patrol` / `Patroller`.
 
-**Anti-clone vs the old show (mandatory):**
+Invent a **program title** and concept around that station. Do **not** default to *Tagahabi ng Balita* unless arguments keep weaving.
+
+**Anti-clone vs the old *show* (mandatory):**
 
 Do not use, echo, or lightly respell:
 
-- Station / program: `DZRM`, `67.5`, `SAIS-SYETE-PUNTO-SINGKO`, `Tagahabi ng Balita`, `tagahabi ng kamalayan`
+- Program / weaving (unless the user kept it): `Tagahabi ng Balita`, `tagahabi ng kamalayan`
 - Vehicle overlay: aarangkada, biyahe, jeepney, makina ng sasakyan, busina, `PEPRENO`, `MULING AARANGKADA`, `AARANGKADA NA`, travel-jingle cadence
 - C5 family: travel buddy, kabiyahero, ruta, red-light break, horn-as-logo
 - Distinctive old lines: `KAAGAPAY NA SUBOK SA PAGHABI…`, `TATAK NG LEHITIMONG SERBISYO…`, `I-CHIKA MO NA`, `CHISMIS NA WALANG KAPARES`, `BALITAANG PALABAN`, `MONTALBEÑOS, IYAN ANG MGA BALITANG HATID NG UMAARANGKADANG ISTASYON`
-- Old opening cadence cloned beat-for-beat (engine → `ITO ANG…` → stuttered callsign → unison title → horn → `AARANGKADA NA` → theme)
+- Old opening cadence cloned beat-for-beat (engine → `ITO ANG…` → stuttered `DZ-D-D-D-Z-R-M` → unison title → horn → `AARANGKADA NA` → theme)
 
-Weaving / Tagahabi: keep **only** if arguments say so. Otherwise retire it.
+Keep saying **D-Z-R-M** and **SAIS-SYETE-PUNTO-SINGKO**. That is the station, not the old program.
+
+Weaving / Tagahabi: keep **only** if arguments say so. Otherwise retire the program name and invent something else — still on DZRM 67.5.
 
 Truth/service slogans need a hook that is ours. Local address: Montalbeños / Luzon if no newer audience file; Pililla research if it exists. Do not invent a hometown.
 
-Fix exact slogan / ID / unison form and use it everywhere. Label **PROPOSAL — not locked**.
+Fix exact slogan / program / unison form and use it everywhere. Station ID is **LOCKED**. Program / slogan / metaphor: **PROPOSAL — not locked**.
 
 Cast default: previous role map. Tagapagbalita 3 credited, silent.
 
@@ -201,10 +205,10 @@ Page look matches `ORIGINAL-SCRIPT.md` **format only**:
 - `**ANGKOR 1:**`, `**TAGAPAGBALITA 1:**`, `**LAHAT:**`, `**BUMPER:**`, `**PAALALA:**`, `**AWIT:**`
 - Spoken copy ALL CAPS Filipino; English terms *italics*
 - Sound as bold cue lines (`**STINGER**`, `**TUNOG NG …**`, ellipsis combos)
-- Spell the **new** ID for air
+- Spell station ID for air as `D-Z-R-M`, `SAIS-SYETE-PUNTO-SINGKO`
 - Do not copy old markdown glitches
 
-Preamble (not a replacement page look): rundown table, bed map, `[UP AND UNDER]`, placeholder legend, AWIT decisions.
+Preamble (not a replacement page look): rundown table, bed map, `[UP AND UNDER]`, placeholder legend. Note AWIT is placeholder-only (no lyrics).
 
 ---
 
@@ -223,7 +227,7 @@ The **opening sequence may differ** from the old script (clock-first, slogan-fir
 
 Required craft in the written parts:
 
-1. Sonic hook + three-layer ID (promise → callsign+freq → program), new words.
+1. Sonic hook + three-layer ID: promise/slogan (new) → **`D-Z-R-M` + `SAIS-SYETE-PUNTO-SINGKO`** (locked) → program name (new, unless Tagahabi is kept).
 2. Time-check slot with blank clock. At most one diegetic beep in the show.
 3. Greeting + KBP line (production realism; new surrounding lines).
 4. Paired intros, new role wording tied to the new concept.
@@ -232,7 +236,7 @@ Required craft in the written parts:
 7. At most one mid-report Q&A slot.
 8. Tease-then-promise bumper (new pair — not PEPRENO). Infomercial: hook → scene holes → problem → `[INFOMERCIAL-FACT]` → `[INFOMERCIAL-SOLUSYON]` → `[INFOMERCIAL-CTA]` → station tag → return. No child-shaming. No National game-show clone.
 9. Re-entry restates **this** identity. Sports then showbiz with bed + lexicon shift.
-10. Close: recap → IDs → unison identity → callback to **this** opening → fade.
+10. Close: recap → IDs → unison identity → callback to **this** opening → fade. Include `**AWIT:** [AWIT-CLOSE]` as an empty placeholder — no lyrics.
 11. 4–5 beds; boundary stingers; duck under speech; one sonic logo; theatrical SFX in the infomercial zone; no music-only gaps.
 
 Speakability: short declaratives, short unison lines.
@@ -258,9 +262,9 @@ Use these tokens verbatim. Do not invent synonyms.
 | `[INFOMERCIAL-SOLUSYON]` | Named solution | Named entity |
 | `[INFOMERCIAL-CTA]` | CTA | Verb + object |
 | `[INFOMERCIAL-PAALALA]` | PSA line | Then written station tag |
-| `[INFOMERCIAL-AWIT]` | Infomercial song | Only if that slot is PLACEHOLDER |
-| `[AWIT-THEME]` | Opening theme | Only if PLACEHOLDER |
-| `[AWIT-CLOSE]` | Closing reprise | Only if PLACEHOLDER |
+| `[AWIT-THEME]` | Opening theme slot | Placeholder only — **no lyrics** |
+| `[INFOMERCIAL-AWIT]` | Infomercial song slot | Placeholder only — **no lyrics** |
+| `[AWIT-CLOSE]` | Closing reprise slot | Placeholder only — **no lyrics** |
 | `[SFX-KWENTO]` | In-story SFX | Only if the day's story needs it |
 
 Toss shape: `[HEADLINE 1]. TYRAH INARES, ANO ANG BUONG DETALYE?` then body, then thank-you.
@@ -283,9 +287,10 @@ Do not leave the user with three half-shows.
 
 1. **Production notes (not for air)** — short:
    - status: COMPLETE NEW SCRIPT (competition-day holes)
-   - concept status: PROPOSAL vs LOCKED
+   - station ID: **LOCKED** — DZRM 67.5 (`D-Z-R-M`, `SAIS-SYETE-PUNTO-SINGKO`)
+   - concept status: PROPOSAL vs LOCKED (program / slogan / metaphor only)
    - identity block (callsign, frequency, program, slogan exact form, sonic logo, audience)
-   - **AWIT decisions** for theme / infomercial / close
+   - AWIT: placeholder only (no generated lyrics) — `[AWIT-THEME]`, `[INFOMERCIAL-AWIT]`, `[AWIT-CLOSE]`
    - placeholder legend
    - bed map
    - target rundown
@@ -301,15 +306,16 @@ Do not leave the user with three half-shows.
 
 - [ ] `AGENTS.md` read first
 - [ ] Package is `division-scripts/[CONCEPT]/` with `DIVISION-SCRIPT-[CONCEPT].md`
+- [ ] Station ID is **DZRM 67.5** (`D-Z-R-M`, `SAIS-SYETE-PUNTO-SINGKO`) — not a new callsign
 - [ ] Concept invented and committed (unless user named/locked one)
-- [ ] Not similar to `ORIGINAL-SCRIPT.md` (identity, metaphor, bumpers, jingle, open/close cadence, distinctive lines)
+- [ ] Not a reskin of the old *program* (Tagahabi / aarangkada / PEPRENO / old jingle / distinctive lines) — station ID stays the original
 - [ ] Not a National identity; nothing from §21
-- [ ] AWIT each slot is WRITTEN, PLACEHOLDER, or OMITTED with a reason — not copied from the old songs
+- [ ] AWIT slots present as empty placeholders only — no generated lyrics
 - [ ] Placeholders consistent; no invented news
 - [ ] Named-question toss + thank-you around each report
 - [ ] Close answers **this** open
 - [ ] House format; Tagapagbalita 3 credited, silent
 - [ ] `ORIGINAL-SCRIPT.md` untouched
-- [ ] Chat reply: folder path, concept in one sentence, AWIT choices, how to fill tokens — do not reprint the whole script unless asked
+- [ ] Chat reply: folder path, concept in one sentence, how to fill tokens — do not reprint the whole script unless asked
 
 Begin. Stay on track.
